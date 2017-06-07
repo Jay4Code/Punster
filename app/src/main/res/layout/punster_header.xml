@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.lga.view.CircleNetworkImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/avatar_width"
+        android:layout_height="@dimen/avatar_height"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/avatar_margin"
+        android:src="@drawable/ic_default_round_avatar" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_avatar"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textColor="@color/author_color"
+        android:textSize="@dimen/author_text_size" />
+
+</RelativeLayout>

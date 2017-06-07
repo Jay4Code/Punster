@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Punster</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--推荐-->
+    <string name="reco">recom</string>
+    <!--视频-->
+    <string name="videoUrl">videoUrl</string>
+    <!--段友秀-->
+    <string name="show">show</string>
+    <!--图片-->
+    <string name="image">image</string>
+    <!--段子-->
+    <string name="joke">joke</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

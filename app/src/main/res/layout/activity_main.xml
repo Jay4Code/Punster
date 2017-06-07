@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lga.punster.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_sections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!--<RadioButton
+            android:id="@+id/rb_reco"
+            style="@style/Section"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_reco_selector"
+            android:text="@string/reco" />
+
+        <RadioButton
+            android:id="@+id/rb_video"
+            style="@style/Section"
+            android:drawableTop="@drawable/ic_video_selector"
+            android:text="@string/videoUrl" />
+
+        <RadioButton
+            android:id="@+id/rb_show"
+            style="@style/Section"
+            android:drawableTop="@drawable/ic_show_selector"
+            android:text="@string/show" />-->
+
+        <RadioButton
+            android:id="@+id/rb_image"
+            style="@style/Section"
+            android:drawableTop="@drawable/ic_image_selector"
+            android:text="@string/image" />
+
+        <RadioButton
+            android:id="@+id/rb_joke"
+            style="@style/Section"
+            android:drawableTop="@drawable/ic_joke_selector"
+            android:text="@string/joke" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_sections" />
+</RelativeLayout>
