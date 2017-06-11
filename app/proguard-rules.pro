@@ -23,3 +23,44 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+# 混淆算法
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/* # 不对算术和类型转化操作符优化，不改变类层次
+
+# 压缩
+-optimizationpasses 5 # 指定压缩级别
+
+# 优化
+-dontoptimize # 不优化输入的类文件
+-allowaccessmodification # 优化时允许访问并修改有修饰符的类和类的成员
+
+# Bean类
+#-keep public class com.lga.dailyread.bean.**{*;} #  保持Bean类
+-keepclassmembers class com.lga.punster.model.bean.** { *; } # 保持Bean类，但混淆类名
+
+# 自定义view
+-keep class **.R$* {*;}
+-keep class com.lga.view.**{*;}
+
+# 引用库--------------
+# fastjson
+-dontwarn com.alibaba.fastjson.**
+-keep class com.alibaba.fastjson.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
+# end--------------
+
+# 测试
+# 保持测试相关的代码
+-dontnote junit.framework.**
+-dontnote junit.runner.**
+-dontwarn android.test.**
+-dontwarn android.support.test.**
+-dontwarn org.junit.**
+
+# 混淆
+-dontskipnonpubliclibraryclassmembers # 不跳过非公共的库的类成员
+-overloadaggressively # 混淆时应用侵入式重载
+-useuniqueclassmembernames # 把混淆类中的方法名也混淆
+-renamesourcefileattribute SourceFile # 将文件来源重命名为“SourceFile”字符串
