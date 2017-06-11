@@ -7,4 +7,7 @@
     <color name="author_color">#001500</color>
     <color name="content_color">#07191f</color>
     <color name="interaction_color">#888888</color>
+
+    <color name="ssxinbaise1">#ffffffff</color>
+    <color name="ssxinmian4">@color/ssxinbaise1</color>
 </resources>

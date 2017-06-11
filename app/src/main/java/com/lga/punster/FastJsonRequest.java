@@ -1,6 +1,8 @@
 package com.lga.punster;
 
 
+import android.os.Environment;
+
 import com.alibaba.fastjson.JSON;
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
@@ -8,7 +10,9 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.Response.Listener;
 import com.android.volley.toolbox.HttpHeaderParser;
+import com.lga.util.GlobeUtil;
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -39,7 +43,7 @@ public class FastJsonRequest<T> extends Request<T> {
             String jsonString = new String(response.data,
                     HttpHeaderParser.parseCharset(response.headers));
             // 输出json文本到文件
-//            GlobeUtil.log2File(jsonString.toString(), new File(Environment.getExternalStorageDirectory().getPath(), "log_punster.txt"));
+            GlobeUtil.log2File(jsonString.toString(), new File(Environment.getExternalStorageDirectory().getPath(), "log_punster.txt"));
             return Response.success(JSON.parseObject(jsonString, mClass),
                     HttpHeaderParser.parseCacheHeaders(response));
         } catch (UnsupportedEncodingException e) {

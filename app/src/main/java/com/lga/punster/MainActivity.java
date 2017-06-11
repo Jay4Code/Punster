@@ -10,8 +10,8 @@ import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.lga.punster.image.ImageFragment;
-import com.lga.punster.joke.JokeFragment;
+import com.lga.punster.constant.Constant;
+import com.lga.punster.model.PunsterFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,11 +60,25 @@ public class MainActivity extends AppCompatActivity {
         });
 
         List<Fragment> fragmentList = new ArrayList<>();
-//        fragmentList.add(RecoFragment.newInstance(0));
-//        fragmentList.add(VideoFragment.newInstance(1));
-//        fragmentList.add(ShowFragment.newInstance(2));
-        fragmentList.add(ImageFragment.newInstance(3));
-        fragmentList.add(JokeFragment.newInstance(4));
+
+
+
+
+        /*PunsterFragment recoFragment = PunsterFragment.newInstance(PunsterFragment.KEY_RECO, Constant.RECO_URL);
+        fragmentList.add(recoFragment);*/
+
+        PunsterFragment jokeFragment = PunsterFragment.newInstance(PunsterFragment.KEY_JOKE, Constant.JOKE_URL);
+        fragmentList.add(jokeFragment);
+
+        PunsterFragment imageFragment = PunsterFragment.newInstance(PunsterFragment.KEY_IMAGE, Constant.IMAGE_URL);
+        fragmentList.add(imageFragment);
+
+        /*PunsterFragment showFragment = PunsterFragment.newInstance(PunsterFragment.KEY_SHOW, Constant.SHOW_URL);
+        fragmentList.add(showFragment);*/
+
+        PunsterFragment videoFragment = PunsterFragment.newInstance(PunsterFragment.KEY_VIDEO, Constant.VIDEO_URL);
+        fragmentList.add(videoFragment);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), fragmentList);
