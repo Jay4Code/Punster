@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">段子</string>
+    <string name="title_activity_main">段子</string>
+    <string name="action_settings">设置</string>
+
+    <!--推荐-->
+    <string name="reco">推荐</string>
+    <!--视频-->
+    <string name="video">视频</string>
+    <!--段友秀-->
+    <string name="show">段友秀</string>
+    <!--图片-->
+    <string name="image">图片</string>
+    <!--段子-->
+    <string name="joke">段子</string>
+</resources>
